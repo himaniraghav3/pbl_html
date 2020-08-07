@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ 
+    <body>
+        <div style="width:330px; margin:0 auto;">
+            <h3 style="text-align: center;">Login Page</h3>
+            <form>
+                <table>
+                    <tr>
+                        <td>Enter User Name:</td>
+                        <td><input type="text" pattern="(?=.*\d)(?=.*[A-Z]).{6,}"></td>
+                    </tr>
+                    <tr>
+                        <td>Enter User Pass:</td>
+                        <td><input type="password" pattern="(?=.*\d)(?=.*[A-Z]).{6,}" required></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit"></td>
+                    </tr>
+                </table>
+            </form>
+            <a href="#">New User</a>
+        </div>
+    </body>
+</html>

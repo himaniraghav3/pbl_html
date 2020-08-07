@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function checkDOB() {
+                var dateString = document.getElementById('dob').value;
+                var myDate = new Date(dateString);
+                var today = new Date();
+                if ( myDate > today ) { 
+                    alert('Invalid date of birth');
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <div style="margin: 0 auto;">
+            <h3>Registration Form</h3>
+            <form>
+                <table>
+                    <tr>
+                        <td>User Id:</td>
+                        <td><input type="text" minlength="4" maxlength="8"></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" required pattern="(?=.*\d)(?=.*[A-Z]).{6,}"></td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth:</td>
+                        <td><input type="date" id="dob" ></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td><input type="radio">Male <input type="radio">Female</td>
+                    </tr>
+                    <tr>
+                        <td>State</td>
+                        <td><select><option>Karnataka</option><option>MP</option><option>Andhra Pradesh</option><option>West Bengal</option><option>UP</option></select></td>
+                    </tr>
+                    <tr>
+                        <td>Contact Number:</td>
+                        <td><input type="number" minlength="10" maxlength="10"></td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td><textarea></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" onclick="checkDOB()"></td>
+                        <td><input type="reset"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
